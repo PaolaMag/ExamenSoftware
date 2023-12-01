@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billetera Electrónica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Billetera Electrónica</h1>
+    <div id="contactos">
+        <h2>Ver Contactos</h2>
+        <input type="text" id="numero_contactos" placeholder="Tu Número">
+        <button onclick="verContactos()">Ver Contactos</button>
+        <ul id="lista_contactos"></ul>
+    </div>
+
+    <div id="pagar">
+        <h2>Realizar Pago</h2>
+        <input type="text" id="numero_origen" placeholder="Tu Número">
+        <input type="text" id="numero_destino" placeholder="Número Destino">
+        <input type="number" id="valor" placeholder="Valor a Pagar">
+        <button onclick="realizarPago()">Pagar</button>
+        <p id="respuesta_pago"></p>
+    </div>
+
+    <div id="historial">
+        <h2>Ver Historial</h2>
+        <input type="text" id="numero_historial" placeholder="Tu Número">
+        <button onclick="verHistorial()">Ver Historial</button>
+        <p id="detalles_historial"></p>
+    </div>
+</body>
+</html>
